@@ -1,0 +1,16 @@
+@import "tailwindcss";
+
+@layer base {
+
+  html {
+  scroll-behavior: smooth;
+}
+
+/* Opsional: Tambahkan padding top agar judul section tidak tertutup navbar */
+section {
+  scroll-margin-top: 80px; 
+}
+    body {
+      font-family: "Poppins", sans-serif;  
+    }
+}
