@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import { DataImage, listTools, listProyek } from "./data";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import { FaGithub, FaInstagram, FaWhatsapp } from "react-icons/fa";
 
 function App() {
   useEffect(() => {
@@ -89,18 +90,49 @@ function App() {
       <section id="contact" className="py-20 px-6 text-center">
         <div className="max-w-2xl mx-auto bg-gradient-to-b from-[#1e293b] to-[#0f172a] p-10 rounded-[2rem] border border-cyan-500/20" data-aos="zoom-in">
           <h2 className="text-3xl font-bold mb-4">Ayo Berdiskusi!</h2>
-          <p className="text-gray-400 mb-8">Punya ide proyek atau sekadar ingin menyapa? Hubungi saya melalui WhatsApp.</p>
-          <a 
-            href="https://wa.me/6281234567890" 
-            className="inline-block bg-cyan-500 text-[#0f172a] px-10 py-4 rounded-full font-bold text-lg hover:bg-cyan-400 transition shadow-lg shadow-cyan-500/30"
-          >
-            Hubungi via WhatsApp
-          </a>
+          <p className="text-gray-400 mb-8">Punya ide proyek atau sekadar ingin menyapa? Hubungi saya melalui sosial media.</p>
+          
+          <div className="flex flex-wrap justify-center gap-6">
+             {/* WhatsApp Button */}
+             <a 
+               href="https://wa.me/628816516325" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 bg-green-500 text-white px-8 py-3 rounded-full font-bold hover:bg-green-400 transition shadow-lg"
+             >
+               <FaWhatsapp className="text-2xl" /> WhatsApp
+             </a>
+
+             {/* GitHub Button */}
+             <a 
+               href="https://github.com/ioAlan-angjai" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 bg-gray-800 text-white px-8 py-3 rounded-full font-bold hover:bg-gray-700 transition shadow-lg border border-white/10"
+             >
+               <FaGithub className="text-2xl" /> GitHub
+             </a>
+
+             {/* Instagram Button */}
+             <a 
+               href="https://instagram.com/tioo.alan" 
+               target="_blank"
+               rel="noopener noreferrer"
+               className="flex items-center gap-2 bg-gradient-to-tr from-yellow-500 via-red-500 to-purple-500 text-white px-8 py-3 rounded-full font-bold hover:scale-105 transition shadow-lg"
+             >
+               <FaInstagram className="text-2xl" /> Instagram
+             </a>
+          </div>
         </div>
       </section>
 
       <footer className="py-10 text-center text-gray-600 border-t border-white/5">
-        &copy; 2026 Tio Alan Portfolio. All rights reserved.
+        <div className="flex justify-center gap-6 mb-4 text-gray-400">
+           <a href="https://github.com/ioAlan-angjai" target="_blank" className="hover:text-cyan-400 transition"><FaGithub size={24}/></a>
+           <a href="https://www.instagram.com/tioo.alan?igsh=bzh1Zm9wcWRidXl3" target="_blank" className="hover:text-cyan-400 transition"><FaInstagram size={24}/></a>
+           <a href="https://wa.me/628816516325" target="_blank" className="hover:text-cyan-400 transition"><FaWhatsapp size={24}/></a>
+        </div>
+        <p>&copy; 2026 Tio Alan Portfolio. All rights reserved.</p>
       </footer>
     </div>
   );
